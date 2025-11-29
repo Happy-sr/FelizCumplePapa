@@ -1,0 +1,230 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #1a1a1a;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CONTENIDO */
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+/* CONTENEDOR DEL ENSAYO */
+.essay-container {
+  max-width: 900px;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0 15px 50px rgba(102, 126, 234, 0.3);
+  padding: 3rem 2.5rem;
+  min-height: auto;
+  position: relative;
+  border-radius: 12px;
+  border: 2px solid #667eea;
+}
+
+/* ENCABEZADO DEL ENSAYO */
+.essay-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 3px solid #667eea;
+}
+
+.school-badge {
+  font-size: 3rem;
+  margin-bottom: 0.8rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.essay-title {
+  font-size: 2rem;
+  color: #667eea;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.essay-subtitle {
+  font-size: 1.1rem;
+  color: #764ba2;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.essay-meta {
+  background: #f0f4ff;
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.essay-meta p {
+  margin: 0.4rem 0;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+/* DIVISOR */
+.essay-divider {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #667eea, transparent);
+  margin: 2rem 0;
+}
+
+/* CONTENIDO DEL ENSAYO */
+.essay-content {
+  line-height: 1.9;
+  font-size: 1rem;
+}
+
+/* SECCIONES */
+.essay-section {
+  margin-bottom: 2rem;
+}
+
+.essay-section h2 {
+  font-size: 1.4rem;
+  color: #667eea;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #764ba2;
+  font-weight: 600;
+}
+
+.essay-section p {
+  margin-bottom: 1rem;
+  text-align: justify;
+  line-height: 1.8;
+  color: #333;
+}
+
+.text-indent {
+  text-indent: 2rem;
+}
+
+.conclusion-final {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  font-size: 1.05rem;
+  color: #764ba2;
+}
+
+/* NOTA DEL PROFESOR */
+.teacher-note {
+  background: linear-gradient(135deg, #fffacd, #f0f4ff);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #ffd700;
+  margin: 2rem 0;
+  border-top: 2px solid #667eea;
+}
+
+.teacher-note p {
+  margin-bottom: 0.8rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.grade {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #764ba2;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+/* FOOTER */
+.essay-footer {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #667eea;
+}
+
+.back-link {
+  display: inline-block;
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s;
+  font-size: 0.95rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+.back-link:hover {
+  color: #764ba2;
+  background: #f0f4ff;
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  .essay-container {
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+
+  .essay-title {
+    font-size: 1.5rem;
+  }
+
+  .school-badge {
+    font-size: 2rem;
+  }
+
+  .essay-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .essay-section p {
+    text-indent: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .text-indent {
+    text-indent: 1rem;
+  }
+}
+
+@media print {
+  body {
+    background: white;
+    padding: 0;
+  }
+
+  .essay-container {
+    box-shadow: none;
+    border: none;
+  }
+
+  .back-link {
+    display: none;
+  }
+}

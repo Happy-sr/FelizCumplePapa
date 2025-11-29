@@ -1,0 +1,239 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background: #a8a8a8;
+  color: #1c1c1c;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CONTENIDO */
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+/* HOJA */
+.page {
+  max-width: 850px;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  padding: 3rem 2.5rem;
+  min-height: 100vh;
+  position: relative;
+  border: 1px solid #ddd;
+  line-height: 1.8;
+}
+
+/* ENCABEZADO DE PAGINA */
+.page-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #333;
+}
+
+.header-emblem {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.escudo-img {
+  max-width: 120px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.header-title {
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  color: #000;
+  margin-bottom: 0.3rem;
+}
+
+.header-subtitle {
+  font-size: 0.95rem;
+  color: #666;
+  font-style: italic;
+}
+
+.header-divider {
+  border: none;
+  height: 1px;
+  background: #999;
+  margin: 1.5rem 0;
+}
+
+/* INFO DEL CASO */
+.case-info {
+  text-align: right;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.case-info p {
+  margin: 0.3rem 0;
+}
+
+/* TITULO SENTENCIA */
+.sentence-title {
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 2rem 0 1rem;
+  letter-spacing: 1px;
+  color: #000;
+}
+
+/* INTRO */
+.sentence-intro {
+  text-align: justify;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+.sentence-intro p {
+  margin-bottom: 1rem;
+}
+
+/* SECCIONES */
+.section {
+  margin: 1.5rem 0;
+  text-align: justify;
+}
+
+.section h3 {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: #000;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid #999;
+  padding-bottom: 0.3rem;
+}
+
+.section p {
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  text-indent: 2rem;
+}
+
+/* FALLO */
+.fallo-section {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-left: 3px solid #333;
+  margin: 2rem 0;
+}
+
+.fallo-box p {
+  text-align: left;
+  text-indent: 0;
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+/* FIRMA */
+.signature-section {
+  margin-top: 3rem;
+  page-break-inside: avoid;
+}
+
+.signature-section p {
+  text-indent: 0;
+  text-align: center;
+}
+
+/* NUMERO DE PAGINA */
+.page-number {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+/* FOOTER DE PAGINA */
+.page-footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #ddd;
+}
+
+.back-link {
+  display: inline-block;
+  color: #0066cc;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.back-link:hover {
+  color: #003399;
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  .page {
+    padding: 1.5rem;
+    min-height: auto;
+  }
+
+  .page-header {
+    margin-bottom: 1rem;
+  }
+
+  .header-title {
+    font-size: 1.3rem;
+  }
+
+  .section h3 {
+    font-size: 0.95rem;
+  }
+
+  .section p {
+    font-size: 0.9rem;
+    text-indent: 1rem;
+  }
+
+  .page-number {
+    position: static;
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+
+@media print {
+  body {
+    background: white;
+    padding: 0;
+  }
+
+  .page {
+    box-shadow: none;
+    max-width: 100%;
+  }
+
+  .back-link {
+    display: none;
+  }
+}

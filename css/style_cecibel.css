@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #d95a5a, #c44444);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.hearts-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.heart {
+  position: absolute;
+  font-size: 1.5rem;
+  opacity: 0.6;
+  animation: fall 6s ease-in infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.header {
+  text-align: center;
+  padding: 1.5rem 1rem 1rem;
+}
+
+.header.small h1 {
+  font-size: 1.6rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+}
+
+.header h2 {
+  font-size: 1.2rem;
+  margin-top: 0.3rem;
+  font-weight: 400;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  max-width: 800px;
+  width: 100%;
+  background: rgba(220, 100, 120, 0.9);
+  border-radius: 8px;
+  padding: 1.5rem 1.3rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.card-cecibel h3 {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #ffe8d6;
+  margin-bottom: 1.2rem;
+}
+
+.love-text {
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+  font-style: italic;
+}
+
+/* APARTADO DE VIDEO */
+.video-section {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.video-section h4 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #ffe8d6;
+}
+
+.video-section iframe {
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 0.8rem;
+  color: #ffe8d6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  text-align: center;
+  padding: 0.8rem;
+  font-size: 0.8rem;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .header h1 {
+    font-size: 2.4rem;
+  }
+  .card {
+    padding: 2rem 2.2rem;
+  }
+}
+/* VIDEO RESPONSIVO */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 177.78%; /* Ratio 9:16 para shorts */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}

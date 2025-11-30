@@ -158,6 +158,62 @@ body {
   text-align: center;
 }
 
+/* FIRMAS */
+.signature-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.signature-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.signature-line {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  min-height: auto;
+  margin-bottom: 0;
+  padding-bottom: 0.2rem;
+  width: 100%;
+}
+
+.signature-img {
+  max-width: 150px;
+  height: auto;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+.signature-name {
+  width: 100%;
+  padding-top: 0.1rem;
+  border-top: 2px solid #333;
+}
+
+.signature-name p {
+  margin: 0.3rem 0;
+  line-height: 1.3;
+  font-size: 0.9rem;
+}
+
+.signature-name p:first-child {
+  font-weight: bold;
+  margin-top: 0.4rem;
+}
+
+.signature-name p:last-child {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 0;
+}
+
 /* NUMERO DE PAGINA */
 .page-number {
   position: absolute;
@@ -206,6 +262,10 @@ body {
     font-size: 1.3rem;
   }
 
+  .escudo-img {
+    max-width: 100px;
+  }
+
   .section h3 {
     font-size: 0.95rem;
   }
@@ -219,6 +279,24 @@ body {
     position: static;
     text-align: center;
     margin-top: 1rem;
+  }
+
+  .signature-boxes {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .signature-img {
+    max-width: 180px;
+    max-height: 100px;
+  }
+
+  .signature-name p {
+    font-size: 0.85rem;
+  }
+
+  .signature-name p:last-child {
+    font-size: 0.8rem;
   }
 }
 
@@ -235,5 +313,56 @@ body {
 
   .back-link {
     display: none;
+  }
+
+  .signature-boxes {
+    page-break-inside: avoid;
+  }
+}
+/* ANEXOS */
+.annexes-section {
+  margin: 2rem 0;
+  page-break-inside: avoid;
+  text-align: center;
+}
+
+.annexes-section h3 {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #000;
+  text-align: center;
+}
+
+.annexes-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.anexo-img {
+  max-width: 90%;
+  height: auto;
+  max-height: 600px;
+  object-fit: contain;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 auto;
+}
+
+/* RESPONSIVE ANEXOS */
+@media (max-width: 768px) {
+  .anexo-img {
+    max-width: 95%;
+    max-height: 400px;
+  }
+
+  .annexes-section {
+    margin: 1.5rem 0;
+    text-align: center;
   }
 }
